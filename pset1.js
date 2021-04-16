@@ -3,11 +3,20 @@
 // You may not use the replace() method or regular expressions to solve this problem. Solve the problem with and without recursion.
 
 function urlChanger(str) {
-  let returnString = '';
+  let returnString = "";
   for (let i = 0; i < str.length; i++) {
     returnString += (str.charAt(i) === ' ') ? '%20' : str.charAt(i);
   }
   return returnString;
 }
 
-console.log(urlChanger("Jasmine Ann Jones"));
+function urlChangerRec(str) {
+  strReplaced = "";
+  if (str.length === 0) {
+    return strReplaced;
+  } else {
+    return (str.substring(1) + urlChanger(strReplaced += (str.charAt(str.length) === ' ') ? '%20' : str.charAt(str.length)));
+  }
+}
+
+console.log(urlChangerRec("Jasmine Ann Jones"));
