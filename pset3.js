@@ -23,4 +23,8 @@ function stringCompress(string) {
   return returnString;
 }
 
+function stringCompressTwo(string) {
+
+}
+
 console.log(stringCompress("aaabccdddda"));
