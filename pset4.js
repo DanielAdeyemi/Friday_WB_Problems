@@ -4,4 +4,16 @@ function uniqueStringChar(string) {
   return (sSet.size == string.length);
 }
 
-console.log(uniqueStringChar("copyright"));
+function uniqueStringCharTwo(string) {
+  for (let i = 0; i < string.length; i++) {
+    for (let j = i + 1; j < string.length; j++) {
+      if (string.charAt(i) == string.charAt(j)) {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
+console.log(uniqueStringChar("hello"));
+console.log(uniqueStringCharTwo("hello"));
