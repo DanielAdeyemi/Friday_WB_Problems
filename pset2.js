@@ -23,4 +23,4 @@ const filteredArray = arr.filter(function(e, position) {
 console.log(filteredArray);
 
 const uniqueArray = [...new Set(arr)];
-console.log(uniqueArray);
+console.log(uniqueArray)
